@@ -1,15 +1,17 @@
+
 export default function Home() {
-    return (
-      <>
-        <div>
-          <h1>
-            Task manager welcome page{' '}
-            <span role="img" aria-label="Greeting icon">
-              💁‍♀️
-            </span>
-          </h1>
-        </div>
-      </>
-    );
-  }
-  
+  return (
+    <>
+      {/* <h1>Home</h1> */}
+
+      <div >
+        <h1 >
+          Task manager welcome page{' '}
+          <span role="img" aria-label="Greeting icon">
+            💁‍♀️
+          </span>
+        </h1>
+      </div>
+    </>
+  );
+}

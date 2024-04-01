@@ -1,39 +1,60 @@
 import { useDispatch } from 'react-redux';
-import { register } from '../../redux/auth/operations';
+import { register } from "../../redux/auth/operation"
+import { Formik, Form, Field} from 'formik';
+
 
 export const RegisterForm = () => {
   const dispatch = useDispatch();
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const form = e.target;
-
-    dispatch(
-      register({
-        name: form.elements.name.value,
-        email: form.elements.email.value,
-        password: form.elements.password.value,
-      })
-    );
-
-    form.reset();
+  const handleSubmit = (values, { resetForm }) => {
+    dispatch(register(values));
+    resetForm();
   };
 
+
   return (
-    <form  onSubmit={handleSubmit} autoComplete="off">
-      <label >
-        Username
-        <input type="text" name="name" />
-      </label>
-      <label >
-        Email
-        <input type="email" name="email" />
-      </label>
-      <label >
-        Password
-        <input type="password" name="password" />
-      </label>
-      <button type="submit">Register</button>
-    </form>
+    <Formik
+    initialValues={{
+      name: '',
+      email: '',
+      password: '',
+    }}
+    onSubmit={handleSubmit}
+    >
+       <Form  autoComplete="off">
+        <label >
+          Username
+          <Field type="text" name="name" />
+        </label>
+        <label>
+          Email
+          <Field type="email" name="email" />
+        </label>
+        <label >
+          Password
+          <Field type="password" name="password" />
+        </label>
+        <button type="submit">Register</button>
+      </Form>
+    </Formik>
   );
 };
+
+
+
+
+    // <form  onSubmit={handleSubmit} autoComplete="off">
+    //   <label >
+    //     Username
+    //     <input type="text" name="name" />
+    //   </label>
+    //   <label >
+    //     Email
+    //     <input type="email" name="email" />
+    //   </label>
+    //   <label >
+    //     Password
+    //     <input type="password" name="password" />
+    //   </label>
+    //   <button type="submit">Register</button>
+    // </form>
