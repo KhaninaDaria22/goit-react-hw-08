@@ -10,11 +10,14 @@ const ContactList = () => {
   const filteredContacts = useSelector(selectFilteredContacts);
 
   return (
-    <ul className={css.ulContacts}>
-      {filteredContacts.map(({ name, id, number }) => (
-          <Contact  key={id} id={id} name={name} number={number} />
-      ))}
-    </ul>
+    <div className={css.section}>
+        <ul className={css.ulContacts}>
+              {filteredContacts.map(({ name, id, number }) => (
+                  <Contact  key={id} id={id} name={name} number={number} />
+              ))}
+        </ul>
+    </div>
+    
   );
 };
 

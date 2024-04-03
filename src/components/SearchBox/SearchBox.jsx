@@ -12,10 +12,15 @@ const SearchBox = () => {
   };
 
   return (
-    <label className={css.labelFilter}>
-      Find contact by Name
-      <input className={css.inputFilter} type="text" value={filter} onChange={handleFilterChange}></input>
-    </label>
+    <>
+      <section className={css.section}> 
+      `<h1>Contacts</h1>`
+        <label className={css.labelFilter}>
+          Find contact by Name
+          <input className={css.inputFilter} type="text" value={filter} onChange={handleFilterChange}></input>
+        </label>
+        </section>
+    </>
   );
 };
 

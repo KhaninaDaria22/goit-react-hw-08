@@ -36,7 +36,8 @@ const ContactForm = () => {
   };
 
   return (
-    <div>
+    <div className={css.section}>
+      <h1>Phonebook</h1>
       <form className={css.divForm} onSubmit={handleSubmit}>
         <label className={css.labelForm}>
           Name
