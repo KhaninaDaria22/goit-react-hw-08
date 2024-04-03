@@ -1,11 +1,11 @@
 .form {
-    width: 320px;
-  }
+    width: 350px;
+}
 .label {
     display: flex;
     flex-direction: column;
     margin-bottom: 16px;
-  }
+}
 .button {
     border-color: green;
 }

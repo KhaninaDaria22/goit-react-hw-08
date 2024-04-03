@@ -41,7 +41,7 @@ export const App = () => {
                 path="/login"
                 element={
                   <RestrictedRoute 
-                    redirectTo="/contact"
+                    redirectTo="/contacts"
                     component={<LoginPage />} />} 
                   />
               <Route 
