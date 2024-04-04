@@ -8,7 +8,7 @@ export default function Home() {
         <h1 >
           Contacts form welcome page{' '}
           <span role="img" aria-label="Greeting icon">
-            💁‍♀️
+           📲
           </span>
         </h1>
       </div>
