@@ -6,7 +6,7 @@ import { lazy, Suspense, useEffect} from 'react';
 import { RestrictedRoute } from './RestrictedRoute';
 import { PrivateRoute } from "./PrivateRoute";
 import { useAuth } from "../hooks/useAuth";
-import {refreshUser} from '../redux/auth/operation'
+import {refreshUser} from '../redux/auth/operations'
 
 
 const HomePage = lazy(() => import("../pages/Home"));
