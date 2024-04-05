@@ -4,7 +4,7 @@
 import css from "./AppBar.module.css"
 import { Navigation } from '../Navigation/Navigation';
 import { useAuth } from "../../hooks/useAuth";
-import { UserMenu } from "../UseMenu/UseMenu";
+import { UserMenu } from "../UserMenu/UserMenu";
 import { AuthNav } from "../AuthNav/AuthNav";
 
 export const AppBar = () => {
