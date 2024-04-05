@@ -3,7 +3,7 @@ import { register } from "../../redux/auth/operations"
 import { Formik, Form, Field} from 'formik';
 import css from './RegisterForm.module.css'
 
-export const RegisterForm = () => {
+export const RegistrationForm = () => {
   const dispatch = useDispatch();
 
   const handleSubmit = (values, { resetForm }) => {
